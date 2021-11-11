@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Translate - Jiusoft</title>
+        <style>
+            body {
+            height: 125vh;
+            margin-top: 80px;
+            padding: 30px;
+            background-size: cover;
+            font-family: sans-serif;
+            }
+
+            #topnav {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: Black;
+                font-family: Arial, sans-serif;
+                font-size: 15px;
+            }
+
+            .nav-link {
+                display: inline-block;
+                width: 100px;
+                height: 55px;
+                color: White;
+
+                /* centering text */
+                text-align: center;    /* horizontally */
+                line-height: 55px;     /* vertically */
+                text-decoration: none;
+            }
+
+            #logo {
+                width: 120px;
+                background-color: RoyalBlue;
+                font-weight: bold;
+            }
+
+            #about {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+        <link
+        rel="shortcut icon"
+        href="./icon.png"
+        >
+    </head>
+    <body>
+        <center>
+            <h1>Jiusoft Translate</h1>
+            <div id="google_translate_element"></div>
+            <script> 
+                function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                }, 'google_translate_element');
+                }
+            </script>
+            <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+        </center>
+    </body>
+</html>
