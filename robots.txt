@@ -15,4 +15,3 @@ Allow: /
 Disallow: 
 
 Sitemap: https://jiu-soft.com/sitemap.xml
-Sitemap: https://jiusoft.github.io/sitemap.xml
