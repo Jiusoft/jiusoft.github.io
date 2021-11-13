@@ -13,3 +13,5 @@ Disallow: /
 User-agent: bingbot
 Allow: /
 Disallow: 
+
+Sitemap: https://jiu-soft.com/sitemap.xml
