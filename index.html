@@ -56,9 +56,15 @@
         type="icon/png"
         href="./icon.png"
         >
-        <script src="./detect.js"></script>
+        <script>
+        function makeSureUserIsNotInMobile() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+                document.getElementById("body").innerHTML = "<p>Sorry, mobile devices are not supported</p>";
+            }
+        }
+        </script>
     </head>
-    <body id="body">
+    <body id="body" onload="makeSureUserIsNotInMobile()">
         <nav
         id="topnav"
         >
