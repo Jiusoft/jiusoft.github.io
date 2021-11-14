@@ -58,7 +58,7 @@
         >
         <script>
         function makeSureUserIsNotInMobile() {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.platform))) {
                 document.getElementById("body").innerHTML = "<p><b>Sorry, mobile devices are not supported<b></p>";
             }
         }
