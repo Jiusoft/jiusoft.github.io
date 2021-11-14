@@ -51,9 +51,10 @@
         href="./icon.png"
         >
         <script>
-        var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-        if (isMobile) {
-            document.getElementById("body").innerHTML = "<p><b><center>Sorry, mobile devices are not supported...</center></b></p>";
+        function makeSureUserIsNotInMobile() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+                document.getElementById("body").innerHTML = "<center><p><b>Sorry, mobile devices are not supported<b></p></center>";
+            }
         }
         </script>
     </head>
