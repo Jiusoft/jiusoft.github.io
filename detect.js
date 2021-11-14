@@ -1,6 +1,7 @@
 function makeSureUserIsInDesktop() {
-    if navigator.userAgentData.mobile {
-        document.getElementById("body").innerHTML = "<p>Sorry, mobile devices are not supported...</p>";  // Assign id body to body element.
-    }
+  const isMobile = navigator.userAgentData.mobile; //resolves true/false
+  if isMobile == true {
+    document.getElementById("body").innerHTML = "<p>Sorry, mobile devices are not supported...</p>";
+  }
 }
 makeSureUserIsInDesktop();
