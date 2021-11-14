@@ -50,7 +50,12 @@
         type="image/png"
         href="./icon.png"
         >
-        <script src="../detect.js"></script>
+        <script>
+        var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+        if (isMobile) {
+            document.getElementById("body").innerHTML = "<p>Sorry, mobile devices are not supported...</p>";
+        }
+        </script>
     </head>
     <body id="body">
         <nav
