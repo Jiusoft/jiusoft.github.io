@@ -2,6 +2,15 @@
 <html>
     <head>
         <title>AIU Search - Jiusoft</title>
+        <script>
+            function makesureuserisnotonpc(){
+                if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                    return;
+                }else{
+                    window.location.replace("/aiu")
+                }
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link
         rel="shortcut icon"
@@ -9,7 +18,7 @@
         href="./icon.png"
         >
     </head>
-    <body id="body">
+    <body onload="makesureuserisnotonpc()">
         <center>
             <nav
             id="topnav"

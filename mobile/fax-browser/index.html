@@ -11,9 +11,18 @@
             margin-left: 30px;
         }
     </style>
+    <script>
+        function makesureuserisnotonpc(){
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                return;
+            }else{
+                window.location.replace("/")
+            }
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="makesureuserisnotonpc()">
     <center>
         <img src="./icon.png" width="128">
     </center>
