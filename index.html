@@ -50,9 +50,16 @@
         type="icon/png"
         href="./icon.png"
         >
+        <script>
+			function makesureuserisnotonmobile(){
+				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+					window.location.replace("/mobile")
+				}
+			}
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body id="body">
+    <body onload="makesureuserisnotonmobile()">
         <nav
         id="topnav"
         >

@@ -378,8 +378,15 @@ background-color: #00ffff;
 color: #ffffff;
 }
 </style>
+<script>
+  function makesureuserisnotonmobile(){
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      document.body.innerHTML.replace("<p>Game not available for Mobile</p>")
+    }
+  }
+</script>
   </head>
-  <body class="loading show-loading-progress show-start-stop-btns show-fullscreen-btn show-monitor-box">
+  <body class="loading show-loading-progress show-start-stop-btns show-fullscreen-btn show-monitor-box" id="body">
     <div id="wrapper">
       <canvas id="stage"></canvas>
       <div id="monitors"></div>
