@@ -381,7 +381,7 @@ color: #ffffff;
 <script>
   function makesureuserisnotonmobile(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      document.body.innerHTML.replace("<p>Game not available for Mobile</p>")
+      document.body.innerHTML = "<p>Game not available for Mobile</p>"
     }
   }
 </script>
