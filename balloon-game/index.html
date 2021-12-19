@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head onload="makesureuserisnotonmobile()">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Balloon Game</title>
@@ -388,7 +388,7 @@ color: #ffffff;
   }
 </script>
   </head>
-  <body class="loading show-loading-progress show-start-stop-btns show-fullscreen-btn show-monitor-box" id="body">
+  <body class="loading show-loading-progress show-start-stop-btns show-fullscreen-btn show-monitor-box" id="body" onload="makesureuserisnotonmobile()">
     <div id="wrapper">
       <canvas id="stage"></canvas>
       <div id="monitors"></div>
