@@ -2,13 +2,6 @@
 <head>
     <title>Fax Browser Start Page</title>
     <link rel="shortcut icon" type="icon/png" href="FAX.png">
-    <script>
-        function submitted(event) {
-            event.preventDefault();
-        }
-
-        f.addEventListener('submit', submitted);
-    </script>
 </head>
 <body>
     <center>
@@ -22,5 +15,19 @@
                 aria-label="Search through site content">
             <button action="submit">Search</button>
         </form>
+        <script>
+            const f = document.getElementById('form');
+            const q = document.getElementById('query');
+            const ddg = 'https://duckduckgo.com/?=';
+      
+            function submitted(event) {
+              event.preventDefault();
+              const url = ddg + q.value;
+              const win = window.open(url, '_blank');
+              win.focus();
+            }
+      
+            f.addEventListener('submit', submitted);
+          </script>
     </center>
 </body>
