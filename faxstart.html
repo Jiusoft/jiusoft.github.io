@@ -24,6 +24,7 @@
               event.preventDefault();
               const url = ddg + q.value;
               const win = window.open(url, '_blank');
+              q.innerText = "";
               win.focus();
             }
       
