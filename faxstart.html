@@ -3,14 +3,9 @@
     <title>Fax Browser Start Page</title>
     <link rel="shortcut icon" type="icon/png" href="FAX.png">
     <script>
-        const q = document.getElementById('query');
-        const ddg="https://duckduckgo.com/?q=";
-
         function submitted(event) {
             event.preventDefault();
-            const url = ddg + q.value;
-            const win = window.open(url, '_blank');
-            win.focus();
+            window.open("https://duckduckgo.com/?q=" + document.getElementById('query').value, '_blank');
         }
 
         f.addEventListener('submit', submitted);
@@ -20,6 +15,7 @@
     <center>
         <img src="FAX.png" width="150">
     </center>
+    <br>
     <center>
         <form id="form" role="search">
             <input type="search" id="query" name="q"
