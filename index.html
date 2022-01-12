@@ -3,12 +3,17 @@
     <head>
         <title>Jiusoft</title>
         <style>
+            .vertical-center{
+                vertical-align: middle;
+            }
+
             body {
                 height: 125vh;
                 margin-top: 80px;
                 padding: 30px;
                 background-size: cover;
                 font-family: sans-serif;
+                overflow: hidden;
             }
 
             #topnav {
@@ -104,7 +109,7 @@
             >About Us
             </a>
         </nav>
-        <center>
+        <div class="vertical-center" style="text-align: center;">
             <h1>Jiusoft</h1>
             <img
             src="https://sdk.bitmoji.com/render/panel/4c26f880-4fba-40d2-af7e-6556ba1f6ff1-e2a16289-6d3b-4507-b86e-91012043289e-v1.png?transparent=1&palette=1"
@@ -118,6 +123,6 @@
             <form target="_blank" action="https://paypal.me/jiusoft8/">
                 <button id="donate-button" type="submit">Donate to Jiusoft!</button>
             </form>
-        </center>
+        </div>
     </body>
 </html>
