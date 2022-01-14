@@ -3,6 +3,64 @@
     <head>
         <title>Jiusoft</title>
         <style>
+            .container {
+                max-width: 480px;
+                height: 500px;
+                background: #5555;
+                margin: auto;
+                border: 2px solid green;
+            }
+
+            .navbar {
+                background: white;
+                position: relative;
+            }
+
+            .links {
+                display: none;
+            }
+
+            .heading a:nth-child(2) {
+                color: green;
+                text-decoration: none;
+                font-size: 20px;
+                display: block;
+                padding: 7px;
+                margin-left: 150px;
+            }
+
+            .heading a i {
+                color: green;
+                padding: 10px;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .heading a i:hover {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            .links {
+                background-color: rgb(190, 196, 190);
+            }
+
+            .links a {
+                color: green;
+                padding: 5px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid white;
+            }
+
+            .links a:hover {
+                background-color: green;
+                color: white;
+            }
             #donate-button {
                 background: RoyalBlue;
                 color: white;
@@ -27,54 +85,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="makesureuserisnotonpc()">
-        <center>
-            <nav
-            id="topnav"
-            >
-                <a
-                class="nav-link"
-                id="logo"
-                href="/"
-                >Jiusoft
-                </a>
+        <div class="container">
+            <div class="navbar">
+                <div class="heading">
+                    <a href="#hamburger-icon" onclick="gfgMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="#Home"> Geeks For Geeks </a>
+                </div>
+                <div class="links">
+                    <a href="#gfg1"> Notes </a>
+                    <a href="#gfg2"> Algorithm </a>
+                    <a href="#gfg3"> Maths </a>
+                    <a href="#gfg4"> Data Structure </a>
+                    <a href="#gfg5"> Java </a>
+                </div>
+            </div>
+        </div>
 
-                <br>
+    <script>
+        function gfgMenu() {
+            const GFG = document.querySelector('.links');
 
-                <a
-                class="nav-link"
-                target="_blank"
-                href="http://blog.jiu-soft.com/"
-                >Blog
-                </a>
-
-                <br>
-                
-                <a
-                class="nav-link"
-                href="./aiu"
-                >AIU Search
-                </a>
-
-                <br>
-
-                <a
-                class="nav-link"
-                target="_blank"
-                href="https://fax.jiu-soft.com"
-                >Fax Browser
-                </a>
-
-                <br>
-
-                <a
-                id="about"
-                class="nav-link"
-                href="./about.html"
-                >About Us
-                </a>
-
-                <br>
-            </nav>
+            if (GFG.style.display === "none") {
+                GFG.style.display = "block";
+            }
+            else {
+                GFG.style.display = "none";
+            }
+        }
+    </script>
+        <div style="text-align: center;">
             <h1>Jiusoft</h1>
             <img
             src="https://sdk.bitmoji.com/render/panel/4c26f880-4fba-40d2-af7e-6556ba1f6ff1-e2a16289-6d3b-4507-b86e-91012043289e-v1.png?transparent=1&palette=1"
@@ -88,6 +129,6 @@
             <form target="_blank" action="https://paypal.me/jiusoft8/">
                 <button id="donate-button" type="submit">Donate to Jiusoft!</button>
             </form>
-        </center>
+        </div>
     </body>
 </html>
