@@ -3,63 +3,13 @@
     <head>
         <title>Jiusoft</title>
         <style>
-            .container {
-                max-width: 480px;
-                height: 500px;
-                background: #5555;
-                margin: auto;
-                border: 2px solid green;
+            * {
+                box-sizing: border-box;
             }
-
-            .navbar {
-                background: white;
-                position: relative;
-            }
-
-            .links {
-                display: none;
-            }
-
-            .heading a:nth-child(2) {
-                color: green;
-                text-decoration: none;
-                font-size: 20px;
-                display: block;
-                padding: 7px;
-                margin-left: 150px;
-            }
-
-            .heading a i {
-                color: green;
-                padding: 10px;
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
-            .heading a i:hover {
-                background-color: rgb(0, 0, 0);
-                color: rgb(255, 255, 255);
-            }
-
-            .links {
-                background-color: rgb(190, 196, 190);
-            }
-
-            .links a {
-                color: green;
-                padding: 5px 16px;
-                text-decoration: none;
-                font-size: 17px;
-                display: block;
-                text-align: center;
-                border-bottom: 1px solid white;
-            }
-
-            .links a:hover {
-                background-color: green;
-                color: white;
+            body {
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
             }
             #donate-button {
                 background: RoyalBlue;
@@ -67,11 +17,73 @@
                 font-size: 25px;
                 border-radius: 10px;
             }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .brand-title{
+                margin: .5rem;
+            }
+            .brand-title a{
+                font-size: 1.75rem;
+                color: white;
+            }
+            .brand-title a:link{
+                text-decoration: none;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+            }
+            .navbar-links.active{
+                display: flex;
+            }
+            .navbar-links ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+            .navbar-links li{
+                list-style: none;
+                text-align: center;
+            }
+            .navbar-links li a{
+                text-decoration: none;
+                color: white;
+                padding: 1rem;
+                display: block;
+                padding: .75rem 1.25rem;
+            }
+            .navbar-links li:hover{
+                background-color: #555;
+            }
+            .toggle-button{
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+            .toggle-button .bar{
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 10px;
+            }
         </style>
         <link
         rel="shortcut icon"
         type="icon/png"
-        href="./icon.png"
+        href="/icon.png"
         >
         <script>
 			function makesureuserisnotonpc(){
@@ -85,36 +97,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="makesureuserisnotonpc()">
-        <div class="container">
-            <div class="navbar">
-                <div class="heading">
-                    <a href="#hamburger-icon" onclick="gfgMenu()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <a href="#Home"> Geeks For Geeks </a>
-                </div>
-                <div class="links">
-                    <a href="#gfg1"> Notes </a>
-                    <a href="#gfg2"> Algorithm </a>
-                    <a href="#gfg3"> Maths </a>
-                    <a href="#gfg4"> Data Structure </a>
-                    <a href="#gfg5"> Java </a>
-                </div>
+        <nav class="navbar">
+            <div class="brand-title"><a href="/mobile/">Brand Name</a></div>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a target="_blank" href="https://blog.jiu-soft.com">Blog</a></li>
+                    <li><a href="./aiu">AIU Search</a></li>
+                    <li><a target="_blank" href="https://fax.jiu-soft.com/">Fax Browser</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+        <script defer>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-    <script>
-        function gfgMenu() {
-            const GFG = document.querySelector('.links');
-
-            if (GFG.style.display === "none") {
-                GFG.style.display = "block";
-            }
-            else {
-                GFG.style.display = "none";
-            }
-        }
-    </script>
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
         <div style="text-align: center;">
             <h1>Jiusoft</h1>
             <img

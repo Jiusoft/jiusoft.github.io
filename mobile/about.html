@@ -9,8 +9,77 @@
 			}
         </script>
         <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
             .tab {
                 margin-left: 40px;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .brand-title{
+                margin: .5rem;
+            }
+            .brand-title a{
+                font-size: 1.75rem;
+                color: white;
+            }
+            .brand-title a:link{
+                text-decoration: none;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+            }
+            .navbar-links.active{
+                display: flex;
+            }
+            .navbar-links ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+            .navbar-links li{
+                list-style: none;
+                text-align: center;
+            }
+            .navbar-links li a{
+                text-decoration: none;
+                color: white;
+                padding: 1rem;
+                display: block;
+                padding: .75rem 1.25rem;
+            }
+            .navbar-links li:hover{
+                background-color: #555;
+            }
+            .toggle-button{
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+            .toggle-button .bar{
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 10px;
             }
         </style>
         <title>About Us - Jiusoft</title>
@@ -22,55 +91,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="makesureuserisnotonpc()">
-        <div style="text-align: center;">
-            <nav
-            id="topnav"
-            >
-                <a
-                class="nav-link"
-                id="logo"
-                href="/"
-                >Jiusoft
-                </a>
+        <nav class="navbar">
+            <div class="brand-title"><a href="/mobile/">Brand Name</a></div>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a target="_blank" href="https://blog.jiu-soft.com">Blog</a></li>
+                    <li><a href="./aiu">AIU Search</a></li>
+                    <li><a target="_blank" href="https://fax.jiu-soft.com/">Fax Browser</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script defer>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-                <br>
-
-                <a
-                class="nav-link"
-                target="_blank"
-                href="http://blog.jiu-soft.com/"
-                >Blog
-                </a>
-
-                <br>
-
-                <a
-                class="nav-link"
-                href="./aiu"
-                >AIU Search
-                </a>
-
-                <br>
-
-                <a
-                class="nav-link"
-                target="_blank"
-                href="https://fax.jiu-soft.com"
-                >Fax Browser
-                </a>
-
-                <br>
-
-                <a
-                id="about"
-                class="nav-link"
-                href="./about.html"
-                >About Us
-                </a>
-
-                <br>
-            </nav>
-        </div>
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
         <h1>About Us</h1>
         <p>Jiusoft is a non-profit organization based in India dedicated to open-source software. We develop and maintain several <a href="https://github.com/jiusoft">projects on GitHub</a>, any contribution to our projects is welcome!</p>
         <br>
