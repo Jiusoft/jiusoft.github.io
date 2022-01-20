@@ -65,9 +65,9 @@
             }
             .toggle-button{
                 position: absolute;
-                top: .75rem;
+                top: 1rem;
                 right: 1rem;
-                display: flex;
+                display: inline-flex;
                 flex-direction: column;
                 justify-content: space-between;
                 width: 30px;
@@ -79,6 +79,9 @@
                 background-color: white;
                 border-radius: 10px;
             }
+            .bar-sep{
+                font-size: .25rem;
+            }
         </style>
         <link
         rel="shortcut icon"
@@ -87,18 +90,18 @@
         >
         <script>
 			function makesureuserisnotonpc(){
-				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+				/* if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 					return;
 				}else{
                     window.location.replace("/")
-                }
+                } */
 			}
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="makesureuserisnotonpc()">
         <nav class="navbar">
-            <div class="brand-title"><a href="/mobile/">Brand Name</a></div>
+            <div class="brand-title"><a href="/mobile/">Jiusoft</a></div>
             <a class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
