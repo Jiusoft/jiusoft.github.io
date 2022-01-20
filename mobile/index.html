@@ -65,15 +65,16 @@
             }
             .toggle-button{
                 position: absolute;
-                top: 1rem;
+                top: 1.25%;
                 right: 1rem;
-                display: inline-flex;
+                display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 width: 30px;
                 height: 21px;
             }
             .toggle-button .bar{
+                justify-content: center;
                 height: 3px;
                 width: 100%;
                 background-color: white;
@@ -89,24 +90,24 @@
         href="/icon.png"
         >
         <script>
-			function makesureuserisnotonpc(){
+			/* function makesureuserisnotonpc(){
 				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 					return;
 				}else{
                     window.location.replace("/")
                 }
-			}
+			} */
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="makesureuserisnotonpc()">
         <nav class="navbar">
             <div class="brand-title"><a href="/mobile/">Jiusoft</a></div>
-            <a class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
+                <a class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
             <div class="navbar-links">
                 <ul>
                     <li><a target="_blank" href="https://blog.jiu-soft.com">Blog</a></li>
