@@ -86,8 +86,8 @@
                     var query, toReplace;
                     url = window.location.href;
                     if (url.includes("?")) {
-                        i = url.indexOf("?");
-                        query = url.slice(i++);
+                        i = url.indexOf("=");
+                        query = url.slice((i++)++);
                     } else {
                         query = "";
                     }
