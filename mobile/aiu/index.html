@@ -83,12 +83,13 @@
         <script>
             function makesureuserisnotonpc(){
                 if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                    var query, toReplace;
                     url = window.location.href;
                     if (url.includes("?")) {
                         i = url.indexOf("?");
-                        let query = url.slice(i++);
+                        query = url.slice(i++);
                     } else {
-                        let query = "";
+                        query = "";
                     }
 
                     if (query.length > 0) {
