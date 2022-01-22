@@ -51,16 +51,17 @@
                     var query, toReplace;
                     url = window.location.href;
                     if (url.includes("?")) {
-                        i = url.indexOf("?");
-                        let query = url.slice(i++);
+                        i = url.indexOf("=");
+                        i++
+                        query = url.slice(i);
                     } else {
-                        let query = "";
+                        query = "";
                     }
 
                     if (query.length > 0) {
-                        let toReplace = "https://jiu-soft.com/mobile/aiu/?q=" + query;
+                        toReplace = "https://jiu-soft.com/mobile/aiu/?q=" + query;
                     } else {
-                        let toReplace = "https://jiu-soft.com/mobile/aiu/";
+                        toReplace = "https://jiu-soft.com/mobile/aiu/";
                     }
                     
 					window.location.replace(toReplace);
