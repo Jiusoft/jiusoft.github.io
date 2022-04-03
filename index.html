@@ -3,12 +3,17 @@
     <head>
         <title>Jiusoft</title>
         <style>
+            .vertical-center{
+                vertical-align: middle;
+            }
+
             body {
                 height: 125vh;
                 margin-top: 80px;
                 padding: 30px;
                 background-size: cover;
                 font-family: sans-serif;
+                overflow: hidden;
             }
 
             #topnav {
@@ -72,9 +77,16 @@
         type="icon/png"
         href="./icon.png"
         >
+        <script>
+			function makesureuserisnotonmobile(){
+				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+					window.location.replace("/mobile")
+				}
+			}
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body id="body">
+    <body onload="makesureuserisnotonmobile()">
         <nav
         id="topnav"
         >
@@ -88,7 +100,7 @@
             <a
             class="nav-link"
             target="_blank"
-            href="http://blog.jiu-soft.com/"
+            href="https://blog.jiu-soft.com/"
             >Blog
             </a>
             
@@ -101,8 +113,8 @@
             <a
             class="nav-link"
             target="_blank"
-            href="/fax-browser/"
-            >Fax Browser
+            href="https://webx.jiu-soft.com"
+            >WebX
             </a>
 
             <a
@@ -119,7 +131,7 @@
             >About Us
             </a>
         </nav>
-        <center>
+        <div class="vertical-center" style="text-align: center;">
             <h1>Jiusoft</h1>
             <img
             src="https://sdk.bitmoji.com/render/panel/4c26f880-4fba-40d2-af7e-6556ba1f6ff1-e2a16289-6d3b-4507-b86e-91012043289e-v1.png?transparent=1&palette=1"
@@ -127,13 +139,13 @@
             height=200
             >
             <p>
-                Welcome to Jiusoft, a company that targets to be as big as Microsoft or Apple. Please consider donating to Jiusoft below.
+                Welcome to Jiusoft, a company that targets to be as big as Microsoft or Google. Please consider donating to Jiusoft below.
             </p>
             <br>
             <form target="_blank" action="https://paypal.me/jiusoft8/">
                 <button id="donate-button" type="submit">Donate to Jiusoft!</button>
             </form>
-        </center>
+      </div>
         <footer>
             <p id="copyright">Copyright 2022 Jiusoft</p>
             <ul>

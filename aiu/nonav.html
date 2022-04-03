@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AIU Search - Jiusoft</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                height: 125vh;
+                padding: 30px;
+                background-size: cover;
+                font-family: sans-serif;
+            }
+
+            #topnav {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: Black;
+                font-family: Arial, sans-serif;
+                font-size: 15px;
+            }
+
+            .nav-link {
+                display: inline-block;
+                width: 100px;
+                height: 55px;
+                color: White;
+
+                /* centering text */
+                text-align: center;    /* horizontally */
+                line-height: 55px;     /* vertically */
+                text-decoration: none;
+            }
+
+            #logo {
+                width: 120px;
+                background-color: RoyalBlue;
+                font-weight: bold;
+            }
+        </style>
+        <link
+        rel="shortcut icon"
+        type="image/png"
+        href="./icon.png"
+        >
+        <script>
+			function makesureuserisnotonmobile(){
+				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                    var query, toReplace;
+                    url = window.location.href;
+                    if (url.includes("?")) {
+                        i = url.indexOf("=");
+                        i++
+                        query = url.slice(i);
+                    } else {
+                        query = "";
+                    }
+
+                    if (query.length > 0) {
+                        toReplace = "/mobile/aiu/?q=" + query;
+                    } else {
+                        toReplace = "/mobile/aiu/";
+                    }
+                    
+					window.location.replace(toReplace);
+				}
+			}
+        </script>
+    </head>
+    <body onload="makesureuserisnotonmobile()">
+        <div style="text-align: center;">
+            <h1>AIU Search</h1>
+            <script async src="https://cse.google.com/cse.js?cx=a35856fe002ad5dde"></script>
+            <div class="gcse-search"></div>
+        </div>
+    </body>
+</html>

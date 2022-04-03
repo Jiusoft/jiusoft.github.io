@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AIU Search - Jiusoft</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #donate-button {
+                background: RoyalBlue;
+                color: white;
+                font-size: 25px;
+                border-radius: 10px;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .brand-title{
+                margin: .5rem;
+            }
+            .brand-title a{
+                font-size: 1.75rem;
+                color: white;
+            }
+            .brand-title a:link{
+                text-decoration: none;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+            }
+            .navbar-links.active{
+                display: flex;
+            }
+            .navbar-links ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+            .navbar-links li{
+                list-style: none;
+                text-align: center;
+            }
+            .navbar-links li a{
+                text-decoration: none;
+                color: white;
+                padding: 1rem;
+                display: block;
+                padding: .75rem 1.25rem;
+            }
+            .navbar-links li:hover{
+                background-color: #555;
+            }
+            .toggle-button{
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+            .toggle-button .bar{
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 10px;
+            }
+        </style>
+        <script>
+            function makesureuserisnotonpc(){
+                if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                    var query, toReplace;
+                    url = window.location.href;
+                    if (url.includes("?")) {
+                        i = url.indexOf("=");
+                        i++
+                        query = url.slice(i);
+                    } else {
+                        query = "";
+                    }
+
+                    if (query.length > 0) {
+                        toReplace = "/aiu/?q=" + query;
+                    } else {
+                        toReplace = "/aiu/";
+                    }
+
+                    window.location.replace(toReplace);
+                }
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="shortcut icon"
+        type="image/png"
+        href="./icon.png"
+        >
+    </head>
+    <body onload="makesureuserisnotonpc()">
+        <nav class="navbar">
+            <div class="brand-title"><a href="/mobile/">Jiusoft</a></div>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a target="_blank" href="https://blog.jiu-soft.com">Blog</a></li>
+                    <li><a href="./aiu">AIU Search</a></li>
+                    <li><a target="_blank" href="https://webx.jiu-soft.com/">WebX</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script defer>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
+        <center>
+            <h1>AIU Search</h1>
+            <script async src="https://cse.google.com/cse.js?cx=a35856fe002ad5dde"></script>
+            <div class="gcse-search"></div>
+        </center>
+    </body>
+</html>
