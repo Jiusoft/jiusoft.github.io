@@ -49,6 +49,28 @@
                 font-size: 25px;
                 border-radius: 10px;
             }
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+                margin: 0;
+            }
+            #copyright {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            footer ul li {
+                display: inline;
+                padding: 0;
+                margin: 0;
+            }
+            #credits {
+                font-size: 13px;
+            }
         </style>
         <link
         rel="shortcut icon"
@@ -123,6 +145,14 @@
             <form target="_blank" action="https://paypal.me/jiusoft8/">
                 <button id="donate-button" type="submit">Donate to Jiusoft!</button>
             </form>
-        </div>
+      </div>
+        <footer>
+            <p id="copyright">Copyright 2022 Jiusoft</p>
+            <ul>
+                <li><a href="https://github.com/Jiusoft" target="_blank"><img src="data:image/png;base64,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" alt="GitHub"></a></li>
+                <li><a href="https://twitter.com/_jiusoft_/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABmJLR0QA/wD/AP+gvaeTAAAC00lEQVRYhe2US2gUWRSGv3OrOpKudBsyoESyciUqUfCBS2UWowsRDHQ3Igoio7PwvXCpCxHUhZthwMFxoUJio6gJCIKCL2ZARBdxXIgyKoKoiGO6utV01T1uzEzU6u7bJq7sb1V1z39PfVzOLWjRosW3Rb5J16K2tUXlWdY3QeRH91mdfTVxoSFNs1IqTYq0+1req7AJmPpx1QKXPWHXaK5jGMDvLy1VI91xvqPfTeiCTjGl8i2rto9C9r6TzHENvCnhJZAlNRJl4DSwDOiMfa+XvvbHn4dM0k6/VFooMNcTcyVVDOe7+HhtlUN1ZAACYD2QBVnrVaMFnKn0OAmpyoyPj91WueGdKm+oa3P2dSeiG13EAQE9J8gS+tJPnYREeD7uNQD9wyuGl1ID4bykvP8+tRhIOQplRXVflA92JxUThaJKx03g05uh/GiFO14xvOgVwzWcfJX9vyTtjjIA16NCZg8imlSsecvMQLhdhMN1Gkcq3BPLXcBDyLv56GCcz6yqVfWTFlP95YVq4ltq5XdEfq61V5RehF43kf94Vq+YKGQN3agZRKg2+bGGKOaLQR5P4gzF1XdXgRLug+qMwV5rWoi1P4yosH+yZYCR6N+Ov5oXAuy94CDIb5MsNMQmqTsGNYXYKzaW9FaB5Yj+OQky6gkHGoUSh3qMlK3Ms8IgKm0T1hEdHM1lhhvFap8QUC0Et1FOTFgGRmIb73IJ1hUCiKcHm4FjQOKf1QnhFwqdD92ijqQGyotUNGeVFSLMcZZR+TUuBFtc4w1PaIzq2/SwFV6IMLMpmXx6q3OeRic0pGk/DBcj8pMKG4Bpjn0rqrLTFoIjzcgkC51/mTHv0tsE3QF0NdlPETkbE+0mN/VBszLJQmOcqfSYSNehukaE2XWz8EiU8wY9OlrI3P0akcZC4ym+6fLVW6QiPYp2oRhUS4J5EhvzN7n2fyYi0aJFi++aDx3m7cc/nXY2AAAAAElFTkSuQmCC" alt="Twitter"></a></li>
+            </ul>
+            <p id="credits">GitHub and Twitter icon by icons8 || Welcome picture by bitmoji</p>
+        </footer>
     </body>
 </html>
