@@ -88,6 +88,7 @@
                 color: white;
                 text-align: center;
                 margin: 0;
+                display: block
             }
             #copyright {
                 font-size: 20px;
@@ -163,7 +164,7 @@
             <script async src="https://cse.google.com/cse.js?cx=a35856fe002ad5dde"></script>
             <div class="gcse-search"></div>
         </div>
-        <footer>
+        <footer id="footer">
             <p id="copyright">Copyright 2022 Jiusoft</p>
             <ul>
                 <li><a href="https://github.com/Jiusoft" target="_blank"><img src="data:image/png;base64,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" alt="GitHub"></a></li>
@@ -172,6 +173,7 @@
             <p id="credits">GitHub and Twitter icon by icons8 || Welcome picture by bitmoji</p>
         </footer>
         <script>
+var footer = document.getElementById('footer');
 window.onload = WindowOnload;
 window.onresize = WindowResize;
 
@@ -188,8 +190,8 @@ function WindowResize() {
     const newHeight = window.innerHeight;
 
     if(previousWidth === newWidth) {
-        if(previousHeight > newHeight+50) { /* Keyboard was displayed */ console.log("shown"); }
-        else if (previousHeight+50 < newHeight) { /* Keyboard was hidden */ console.log("hidden"); }
+        if(previousHeight > newHeight+50) { footer.style.display = 'none'; }
+        else if (previousHeight+50 < newHeight) { footer.style.display = 'block'; }
     }
 
     document.body.setAttribute("height", window.innerHeight);
